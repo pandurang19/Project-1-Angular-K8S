@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-deployment # Deployment name which is visible in deployment
+spec:
+  selector:
+    matchLabels:
+      app: frontend # should match with template labels
+  replicas: 1
+  template: # Pod template starts from here 
+    metadata:
+      labels:
+        app: frontend # should match with selector.matchLabels
+    spec:
+      containers:
+      - name: app
+        image: pmv1919/angular-app:1.0 # docker image
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80 # container running on port 80 in the cluster
