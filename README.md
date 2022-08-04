@@ -54,8 +54,3 @@
 ### 1. InvalidImageName, ImagePullBackOff and ErrImagePull
 Fix:
     a. provide the proper name for docker image. Check spelling and tag
-
-### 2. 
-
-Microservices:
-https://www.youtube.com/watch?v=pIPji3_rYPY
